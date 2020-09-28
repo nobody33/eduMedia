@@ -129,7 +129,7 @@ function getMousePosition(e) {
 function intersects(circle) {
     var areaX = mousePosition.x - circle.x;
     var areaY = mousePosition.y - circle.y;
-    return areaX * areaX + areaY * areaY <= circle.r * circle.r;
+    return Math.pow(areaX, 2) + Math.pow(areaY, 2) <= Math.pow(circle.r, 2);
 }
 
 Array.prototype.move = function (old_index, new_index) {
